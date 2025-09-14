@@ -1,13 +1,16 @@
 function App(){
-  const name = "Amaan Ansari"
-  let x = 10 
-  let y = 20
+  function callFun(){
+    alert("Function Called")
+  }
+  function fruit(){
+    alert("apple")
+  }
+  
   return(
     <>
-     <h1>{name}</h1>
-     <h1>{10 + 20 + 30}</h1> 
-     <h1>{ x + y }</h1>
-     <button onClick={() => alert("Hello")}>Click Me</button>
+     <h1>Event And Function Call</h1>
+     <button onClick={callFun}>Click Me</button>
+     <button onClick={fruit}>Apple</button>
     </>
   )
 }
