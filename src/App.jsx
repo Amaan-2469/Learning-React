@@ -1,11 +1,7 @@
-import Login, {Profile, Setting} from "./UserComponent"
 function App(){
   return(
     <div>
-      <h1>Hello World</h1>
-      <Login />
-      <Profile />
-      <Setting />
+      <h1>Learnig React</h1>
     </div>
   )
 }
