@@ -1,16 +1,16 @@
-import Change from './Change.jsx';
-function App(){ 
-  let fruit = "Apple";
-  const handleFruit = () => {
-    fruit = "Banana";
-  }
+import { useState } from "react";
+function App(){
+  const [display,setDisplay] = useState(true);
   return(
-    <>
-     <h1>States in React</h1>
-     <h1>{fruit}</h1>
-     <button onClick={handleFruit}>Change fruit name</button>
-     <Change />
-    </>
+    <div>
+      <h1>Toggle in React</h1>
+      <button onClick={() => setDisplay(!display)}>Toggle</button>
+
+      {
+        display ? <h1>Amaan Ansari</h1>: null
+      }
+
+    </div>
   )
 }
 
