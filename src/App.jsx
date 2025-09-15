@@ -1,17 +1,13 @@
-function App(){
-  function callFun(){
-    alert("Function Called")
+function App(){ 
+  let fruit = "Apple";
+  const handleFruit = () => {
+    fruit = "Banana";
   }
-  function fruit(name){
-    alert(name)
-  }
-  
   return(
     <>
-     <h1>Event And Function Call</h1>
-     <button onClick={callFun}>Click Me</button>
-     <button onClick={() => fruit("Apple")}>Apple</button>
-     <button onClick={() => fruit("Banana")}>Banana</button>
+     <h1>States in React</h1>
+     <h1>{fruit}</h1>
+     <button onClick={handleFruit}>Change fruit name</button>
     </>
   )
 }
