@@ -1,20 +1,32 @@
-import { useState } from "react";
+import User from "./User"
 function App(){
-  const [count,setCount] = useState(0);
-  return(
-    <>
-    <h1>Multiple Contion in React</h1>
-    <h1>{count}</h1>
-    <button onClick={()=> setCount(count + 1)}>Counter</button>
-    {
-      count == 0 ? <h1>Condition 0</h1>
-      :count == 1 ? <h1>Condition 1</h1>
-      :count == 2? <h1>Condition 2</h1>
-      :count == 3? <h1>Condition 3</h1>
-      :count == 4 ? <h1>Condition 4</h1>
-      :<h1>Other Condition</h1>
-    }
-    </>
+  // let userName = "Amaan Ansari";
+  // let age = 24;
+  // let email = "amaan@test.com";
+  let userObject = {
+    name:"Amaan Ansari",
+    age:"24",
+    email:"amaan@test.com"
+  }
+  let userObject2 = {
+    name:"Farhaan Ansari",
+    age:"14",
+    email:"farhaan@test.com"
+  }
+  let userObject3 = {
+    name:"Faizan Ansari",
+    age:"20",
+    email:"faizan@test.com"
+  }
+  return (
+    <div>
+      <h1>Props in React</h1>
+      {/* <User name ="Amaan Ansari" age = {24} email = "amaan@test.com"/> */}
+      {/* <User name = {userName} age = {age} email = {email} /> */}
+      <User user = {userObject} />
+      <User user = {userObject2} />
+      <User user = {userObject3} />
+    </div>
   )
 }
 
