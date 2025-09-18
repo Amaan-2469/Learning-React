@@ -1,13 +1,25 @@
 import { useState } from "react"
 
 function App(){
-  const [val,setValue] = useState("")
+  const[name,setName] = useState('');
+  const[password,setPassword] = useState('')
+  const[email,setEmail] = useState('')
   return (
     <div>
-      <h1>Get Input Field Value</h1>
-      <input type="text" value={val} onChange={(event) => setValue(event.target.value)} placeholder="Enter Username" />
-      <h1>{val}</h1>
-      <button onClick={() => setValue("")}>Clear Value</button>
+      <h1>Controlled Component</h1>
+      <form action="" method="get">
+        <input type="text" value={name} onChange={(event) => setName(event.target.value)} placeholder="Enter Username"/>
+        <br /><br />
+        <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Enter password"/>
+        <br /><br />
+        <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Enter email"/>
+        <br /><br />
+        <button>Submit</button>
+        <button onClick={() => {setName(''),setPassword(''),setEmail('')}}>Clear</button>
+      </form>
+      <h3>{name}</h3>
+      <h3>{password}</h3>
+      <h3>{email}</h3>
     </div>
   )
 }
